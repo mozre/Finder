@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ui-1.5.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.mcxiaoke.next/ui/1.5.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.mcxiaoke.next/ui/1.5.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.next/ui/1.5.0/89b74caea2221fb715b319e83663a30577452b71/ui-1.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

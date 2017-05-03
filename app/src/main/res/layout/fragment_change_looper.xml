@@ -1,0 +1,13 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/change_looper_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mozre.find.profile.ChangeLooperFragment">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/change_looper_drawee"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

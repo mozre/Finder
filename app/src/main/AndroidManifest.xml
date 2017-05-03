@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mozre.find"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.1">
+
+    <!--installLocation:指应用安装的位置，此处有三个选项：1. auto 2.preferExternal 3. internalOnly-->
+
+    <uses-sdk
+        android:maxSdkVersion="24"
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22" />
+    <!--一般情况下，不要指定maxSdkVersion minSdkVersion是指支持得最小SDK,targetSdkVersion是指目标SDK，-->
+    <!--目标SDK用于指定在开发和测试时应用程序使用的平台，设置目标SDK版本即告诉系统，不需要为支持该版本而进行任何向前和向后的兼容性更改
+    威力利用最新平台的UI改进，当确认应用程序在最新的平台版本上表现符合预期后，即使应用程序中没有使用任何新的API，
+    也应该将其目标SDK设为最新平台版本
+    -->
+
+
+    <!--指定以下输入设备的需求，若不满足该需求，则此应用不能安装到该设备上-->
+    <uses-configuration android:reqHardKeyboard="false" />
+
+    <!--指明该应用应用程序需要的硬件功能-->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+
+    <!--指定应用程序运行所需的屏幕分辨率-->
+
+    <supports-screens
+        android:compatibleWidthLimitDp="1440"
+        android:largeScreens="true"
+        android:largestWidthLimitDp="720"
+        android:normalScreens="true"
+        android:requiresSmallestWidthDp="480" />
+
+    <!--指定GL纹理压缩格式-->
+    <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
+
+    <!--配置应用使用权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".module.main.MainActivity" />
+        <activity android:name=".module.account.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.account.RegisterActivity" />
+        <activity
+            android:name=".module.main.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!-- <activity android:name=".module.middle.UpdateUserIcon"></activity> -->
+        <!-- <receiver -->
+        <!-- android:name=".receiver.NetStateBroadcastReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"></receiver> -->
+        <activity
+            android:name=".module.titlebar.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".module.middle.ShowAllInfoForRecycleItem"
+            android:theme="@style/AppTheme.NoAnimation" />
+        <activity
+            android:name=".module.middle.ForwardMessage"
+            android:theme="@style/AppTheme.NoAnimation" />
+        <activity
+            android:name=".module.middle.ReviewMessage"
+            android:theme="@style/AppTheme.NoAnimation" />
+        <activity android:name=".module.middle.NewMessage"></activity>
+    </application>
+
+</manifest>
